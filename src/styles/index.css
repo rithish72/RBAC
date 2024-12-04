@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #E8EDF6, #FFFFFF);
+  color: #333333;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  animation: landingAnimation 0.8s ease-in-out;
+}
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #34495E, #2C3E50);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  animation: landingAnimation 1s ease-in-out;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-title img {
+  max-width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.nav-menu a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #dfe6e9;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 8px;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: #3498DB;
+  color: #ffffff;
+  font-weight: 600;
+  transform: translateX(8px);
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.5);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 40px;
+  background: #F7F9FC;
+  animation: landingAnimation 1.2s ease-in-out;
+}
+
+.content input,
+.content select {
+  padding: 10px;
+  border-radius: 6px;
+  border-width: 1px;
+  transition: 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.content input:hover,
+.content select:hover {
+  transform: translateY(-3px);
+  box-shadow: 1px 1px 1px 1px #dcf1ff;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #34495E;
+  letter-spacing: 1.2px;
+  border-bottom: 2px solid #3498DB;
+  padding-bottom: 10px;
+  display: inline-block;
+  animation: fadeIn 0.8s ease;
+}
+
+.card {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #3498DB;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #3498DB;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: #2980B9;
+}
+
+button.delete-btn {
+  background: #3498DB;
+}
+
+button.delete-btn:hover {
+  background: #3498DB;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInScale 0.5s ease-in-out;
+}
+
+.modal h2 {
+  font-size: 22px;
+  color: #34495E;
+  margin-bottom: 15px;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.modal input,
+.modal select {
+  width: 80%;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #333333;
+  margin-bottom: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal input:focus,
+.modal select:focus {
+  outline: none;
+  border-color: #3498DB;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 0px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+table th,
+table td {
+  border-color: #fff;
+  padding: 14px;
+  text-align: left;
+  color: #34495E;
+  border-bottom: 1px solid #ddd;
+}
+
+table thead {
+  background: #3498DB;
+  color: #ffffff;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #F7F9FC;
+}
+
+table tbody tr:hover {
+  background: #ECF2F8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes landingAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    padding: 8px 10px;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  button {
+    display: block;
+    width: auto;
+    padding: 10px 15px;
+    font-size: 14px;
+    margin: 8px auto;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
