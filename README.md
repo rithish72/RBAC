@@ -40,3 +40,4 @@ Follow these steps to run the project locally or deploy it.
 ## Contact
 
 - **Email**: [rithishkurapati72@gmail.com](mailto:rithishkurapati72@gmail.com)
+- **Phone no**: 9542608022
